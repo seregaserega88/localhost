@@ -14,7 +14,9 @@ header ("Content-Type: text/html; charset=utf-8"); //кодировка.
 </head>
 <body><!--кодировка -->
 <div class="idRamka">
-<h1>Сайт пока непонятно с чем</h1>
+
+<h1>Сайт понятно с чем!</h1>
+
 
 <h2>ВХОД/ВЫХОД</h2>
 
