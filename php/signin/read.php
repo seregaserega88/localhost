@@ -17,10 +17,10 @@ $password = stripslashes($password);
     $login = trim($login);
     $password = trim($password);
 // подключаемся к базе
-   include("../../include/mysql.php"); // файл bd.php должен быть в той же папке, что и все остальные, если это не так, то просто измените путь 
+   $link = mysqli_connect("localhost", "root", "", "shpora"); 
  
-$result = mysql_query("SELECT * FROM log_pass_email WHERE login='$login'"); //извлекаем из базы все данные о пользователе с введенным логином
-    $myrow = mysql_fetch_array($result);
+$result = mysqli_query($link,"SELECT * FROM log_pass_email WHERE login='$login'"); //извлекаем из базы все данные о пользователе с введенным логином
+    $myrow = mysqli_fetch_array($result);
     if (empty($myrow['password']))
     {
     //если пользователя с введенным логином не существует

@@ -1,7 +1,7 @@
 <?php
 session_start();
 Header("Content-Type: text/html;charset=UTF-8");
-include("../../include/mysql.php"); // 
+$link = mysqli_connect("localhost", "root", "", "shpora");
 
 ?>
 <form autocomplete="off" method='POST' action="read.php">
